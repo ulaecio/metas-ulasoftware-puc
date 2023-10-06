@@ -69,3 +69,9 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (22, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (23, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3);
+
+INSERT INTO tb_target (amount, value, user_id) VALUES (120.0, 145, 1);
+INSERT INTO tb_target (amount, value, user_id) VALUES (350.0, 230, 2);
+INSERT INTO tb_target (amount, value, user_id) VALUES (160.0, 489, 2);
+
+

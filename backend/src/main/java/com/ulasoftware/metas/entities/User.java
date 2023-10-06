@@ -1,8 +1,10 @@
 package com.ulasoftware.metas.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -16,6 +18,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -40,6 +43,9 @@ public class User implements UserDetails, Serializable{
 	joinColumns = @JoinColumn(name = "user_id"),
 	inverseJoinColumns = @JoinColumn(name = "role_id"))	
 	private Set<Role> roles = new HashSet<>();
+	
+	@OneToMany(targetEntity=Target.class, mappedBy="id", fetch=FetchType.EAGER)
+	private List<Target> targets = new ArrayList<>();
 	
 	public User() {
 	}
@@ -77,6 +83,10 @@ public class User implements UserDetails, Serializable{
 	
 	public Set<Role> getRoles() {
 		return roles;
+	}
+
+	public List<Target> getTargets() {
+		return targets;
 	}
 
 	@Override
