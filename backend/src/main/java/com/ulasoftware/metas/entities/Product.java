@@ -2,7 +2,9 @@ package com.ulasoftware.metas.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -39,6 +41,9 @@ public class Product implements Serializable{
 	joinColumns = @JoinColumn(name = "product_id"),
 	inverseJoinColumns = @JoinColumn(name = "category_id"))	
 	Set<Category> categories = new HashSet<>();
+	
+    @ManyToMany(mappedBy = "products")
+    private List<Sale> sales = new ArrayList<>();
 	
 	public Product() {
 		
@@ -128,11 +133,5 @@ public class Product implements Serializable{
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}
-	
-	
-	
-	
-	
-	
+	}	
 }

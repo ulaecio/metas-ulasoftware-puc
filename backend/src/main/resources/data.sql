@@ -74,4 +74,15 @@ INSERT INTO tb_target (amount, value, user_id) VALUES (120.0, 145, 1);
 INSERT INTO tb_target (amount, value, user_id) VALUES (350.0, 230, 2);
 INSERT INTO tb_target (amount, value, user_id) VALUES (160.0, 489, 2);
 
+INSERT INTO tb_sale (value, user_id) VALUES (160.0, 2);
+INSERT INTO tb_sale (value, user_id) VALUES (350.0, 1);
+INSERT INTO tb_sale (value, user_id) VALUES (120.0, 1);
+
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (1, 1);
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (1, 2);
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (1, 3);
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (2, 1);
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (2, 3);
+INSERT INTO tb_sale_product (sale_id, product_id) VALUES (3, 2);
+
 

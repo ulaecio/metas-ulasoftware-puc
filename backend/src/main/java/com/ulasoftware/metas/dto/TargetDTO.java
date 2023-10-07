@@ -60,9 +60,5 @@ public class TargetDTO implements Serializable{
 
 	public User getUser() {
 		return user;
-	}
-	
-
-
-	
+	}	
 }
