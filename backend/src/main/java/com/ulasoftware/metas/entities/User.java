@@ -38,6 +38,8 @@ public class User implements UserDetails, Serializable{
 	private String name;
 	private String password;
 	
+	private Route route;
+	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role",
 	joinColumns = @JoinColumn(name = "user_id"),
@@ -84,6 +86,10 @@ public class User implements UserDetails, Serializable{
 		this.password = password;
 	}
 	
+	public Route getRoute() {
+		return route;
+	}
+
 	public Set<Role> getRoles() {
 		return roles;
 	}
