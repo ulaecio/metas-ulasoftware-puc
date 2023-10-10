@@ -1,36 +1,28 @@
 package com.ulasoftware.metas.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.ulasoftware.metas.entities.Product;
 import com.ulasoftware.metas.entities.Sale;
 
-public class SaleDTO implements Serializable{
+public class SaleDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	Long id;
-	Double value;
-	private Long userId;
-	private List<Product> products = new ArrayList<>();
+	private Long id;
+	private Double value;
+	private UserDTO user;
+	private List<ProductDTO> products;
 
 	public SaleDTO() {
 	}
 
-	public SaleDTO(Long id, Double value, Long userId, List<Product> products) {
-		super();
-		this.id = id;
-		this.value = value;
-		this.userId = userId;
-		this.products = products;
-	}
-
-	public SaleDTO(Sale entity, List<Product> products) {
-		id = entity.getId();
-		value = entity.getValue();
-		userId = entity.getId();
-		products = entity.getProducts();
+	public SaleDTO(Sale sale, List<Product> products) {
+		this.id = sale.getId();
+		this.value = sale.getValue();
+		this.user = new UserDTO(sale.getUser());
+		this.products = products.stream().map(ProductDTO::new).collect(Collectors.toList());
 	}
 
 	public Long getId() {
@@ -49,15 +41,11 @@ public class SaleDTO implements Serializable{
 		this.value = value;
 	}
 
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public List<Product> getProducts() {
+	public List<ProductDTO> getProducts() {
 		return products;
+	}
+
+	public UserDTO getUser() {
+		return user;
 	}
 }
