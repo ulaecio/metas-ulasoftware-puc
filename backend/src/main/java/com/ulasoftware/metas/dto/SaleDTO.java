@@ -1,12 +1,14 @@
 package com.ulasoftware.metas.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.ulasoftware.metas.entities.Product;
 import com.ulasoftware.metas.entities.Sale;
 
-public class SaleDTO {
+public class SaleDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
 
 	Long id;
 	Double value;

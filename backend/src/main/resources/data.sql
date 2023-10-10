@@ -1,6 +1,6 @@
-INSERT INTO tb_user (name, password, route) VALUES ('Alex', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 1);
-INSERT INTO tb_user (name, password, route) VALUES ('Maria', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 2);
-INSERT INTO tb_user (name, password, route) VALUES ('Ulaecio', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 3);
+INSERT INTO tb_user (name, password) VALUES ('Alex', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, password) VALUES ('Maria', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, password) VALUES ('Ulaecio', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 
 INSERT INTO tb_role (authority) VALUES ('ROLE_SELLER');
 INSERT INTO tb_role (authority) VALUES ('ROLE_MANAGER');
@@ -85,8 +85,8 @@ INSERT INTO tb_sale_product (sale_id, product_id) VALUES (2, 1);
 INSERT INTO tb_sale_product (sale_id, product_id) VALUES (2, 3);
 INSERT INTO tb_sale_product (sale_id, product_id) VALUES (3, 2);
 
-INSERT INTO tb_route (name) VALUES ('São Luis - MA');
-INSERT INTO tb_route (name) VALUES ('São J. de Ribamar - MA');
-INSERT INTO tb_route (name) VALUES ('Raposa - MA');
+INSERT INTO tb_route (name, user_id) VALUES ('São Luis - MA', 1);
+INSERT INTO tb_route (name, user_id) VALUES ('São J. de Ribamar - MA', 2);
+INSERT INTO tb_route (name, user_id) VALUES ('Raposa - MA', 3);
 
 

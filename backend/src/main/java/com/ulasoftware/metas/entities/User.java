@@ -38,8 +38,6 @@ public class User implements UserDetails, Serializable{
 	private String name;
 	private String password;
 	
-	private Route route;
-	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role",
 	joinColumns = @JoinColumn(name = "user_id"),
@@ -51,6 +49,9 @@ public class User implements UserDetails, Serializable{
 	
 	@OneToMany(mappedBy = "user")
 	private List<Sale> sales = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "user")
+    private List<Route> routes = new ArrayList<>();
 	
 	public User() {
 	}
@@ -84,10 +85,6 @@ public class User implements UserDetails, Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
-	public Route getRoute() {
-		return route;
 	}
 
 	public Set<Role> getRoles() {
