@@ -1,0 +1,60 @@
+.base-card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(24, 23, 23);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.text-info-senha {
+    font-size: x-small;
+}
+
+.container-login {
+    margin-top: 6rem !important;
+}
+
+.home-btn-order {
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    width: 235px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+    color: #FFF;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-justify: initial;
+}
+
+.home-btn-order:hover {
+    background-color: var(--primary-hover-color);
+    color: #FFF;
+    transform: scale(1.01);
+}
+
+@media (min-width: 411px) {
+    .container-login {
+        margin-top: 12rem !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .base-card {
+        width: 350px;
+        margin-top: 7rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .base-card {
+        width: 350px;
+        margin-top: 25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .base-card {
+        width: 350px;
+        margin-top: 7rem;
+    }
+}

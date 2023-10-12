@@ -1,0 +1,21 @@
+.div-home {
+    margin-top: 5rem;
+}
+
+@media (min-width:411px) {
+    .div-home {
+        margin-top: 9rem;
+    }
+}
+
+@media (min-width:768px) {
+    .div-home {
+        margin-top: 7rem;
+    }
+}
+
+@media (min-width: 579px) {
+    .div-home {
+        margin-top: 7rem;
+    }
+}
