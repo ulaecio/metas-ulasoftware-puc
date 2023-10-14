@@ -1,49 +1,55 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import BaseForm from "../../BaseForm";
-import "./styles.css";
 import { makePrivateRequest } from "core/utils/request";
+import 'react-toastify/dist/ReactToastify.css';
+import "./styles.css";
 
 type FormState = {
   name: string;
-  price:string;
+  price: string;
   category: string;
   description: string;
-}
+};
 
-type FormEvent =  React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>;
+type FormEvent = React.ChangeEvent<
+  HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+>;
 
 const Form = () => {
   const [formData, setFormData] = useState<FormState>({
-    name: '',
-    price: '',
-    category: '0',
-    description: ''
+    name: "",
+    price: "",
+    category: "0",
+    description: "",
   });
-
 
   const handleOnChange = (event: FormEvent) => {
     const name = event.target.name;
     const value = event.target.value;
 
-    setFormData(data => ({ ...data, [name]: value }));
-  }
+    setFormData((data) => ({ ...data, [name]: value }));
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const payload = {
-      ...formData, 
+      ...formData,
       //imagem mock para produtos adicionados
-      imgUrl: 'https://raw.githubusercontent.com/ulaecio/metas-ulasoftware-puc/main/frontend/resources/imagem-nao-disponivel.png',
-      categories: [{ id: formData.category}]
+      imgUrl:
+        "https://raw.githubusercontent.com/ulaecio/metas-ulasoftware-puc/main/frontend/resources/imagem-nao-disponivel.png",
+      categories: [{ id: formData.category }],
+    };
 
-    }
-
-    makePrivateRequest({ url: '/products', method: 'POST', data: payload})
-    .then(() => {
-      setFormData({ name: '', category: '', price: '', description: '' });
-    });
-
-  }
+    makePrivateRequest({ url: "/products", method: "POST", data: payload })
+      .then(() => {
+        toast.success(`Produto cadastrado com sucesso!`);
+        setFormData({ name: "", category: "", price: "", description: "" });
+      })
+      .catch(() => {
+        toast.warning("Erro ao cadastrar produto!");
+      });
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -59,15 +65,16 @@ const Form = () => {
               placeholder="Nome do produto"
             />
             <select
-            value={formData.category}
-            className="form-control mb-5" onChange={handleOnChange}
-            name="category"
+              value={formData.category}
+              className="form-control mb-5"
+              onChange={handleOnChange}
+              name="category"
             >
-                <option value="0">Selecione a categoria</option>
-                <option value="1">Livros</option>
-                <option value="2">Computadores</option>
-                <option value="3">Eletrônicos</option>
-                <option value="4">Bebidas</option>
+              <option value="0">Selecione a categoria</option>
+              <option value="1">Livros</option>
+              <option value="2">Computadores</option>
+              <option value="3">Eletrônicos</option>
+              <option value="4">Bebidas</option>
             </select>
             <input
               value={formData.price}
