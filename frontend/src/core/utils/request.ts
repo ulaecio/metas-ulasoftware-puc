@@ -10,7 +10,7 @@ export type RequestParams = {
     headers?: object;
 }
 
-export const BASE_URL = process.env.REACT_APP_BACKEND_URL
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? "https://metas-ulasoftware-puc-071d84e3f6d2.herokuapp.com"
 
 export const makeRequest = ({ method = 'GET', url, data, params, headers}: RequestParams) => {
     return axios({
