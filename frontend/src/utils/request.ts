@@ -3,12 +3,10 @@ import qs from "qs";
 import history from "./history";
 import { getAuthData } from "./storage";
 
-//export const BASE_URL = `http://${"localhost"}:8080`;
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL
 
-export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
-
-const CLIENT_ID = process.env.REACT_APP_BACKEND_URL ?? "metaspuc";
-const CLIENT_SECRET = process.env.REACT_APP_BACKEND_URL ?? "metaspuc123";
+const CLIENT_ID = process.env.REACT_APP_BACKEND_URL
+const CLIENT_SECRET = process.env.REACT_APP_BACKEND_URL
 type LoginData = {
   username: string;
   password: string;
