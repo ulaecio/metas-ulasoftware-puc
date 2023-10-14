@@ -1,4 +1,3 @@
-import { url } from 'inspector';
 import history from './history';
 
 type LoginResponse = {

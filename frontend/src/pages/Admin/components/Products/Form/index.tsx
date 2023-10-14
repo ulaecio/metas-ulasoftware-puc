@@ -32,7 +32,8 @@ const Form = () => {
     event.preventDefault();
     const payload = {
       ...formData, 
-      imgUrl: 'https://nutripao.com/wp-content/uploads/2022/08/Refrigerante-Cajuina-Sao-Geraldo-2-Litros.jpg',
+      //imagem mock para produtos adicionados
+      imgUrl: 'https://raw.githubusercontent.com/ulaecio/metas-ulasoftware-puc/main/frontend/resources/imagem-nao-disponivel.png',
       categories: [{ id: formData.category}]
 
     }

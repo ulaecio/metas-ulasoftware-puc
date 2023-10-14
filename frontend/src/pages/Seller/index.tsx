@@ -8,7 +8,6 @@ import { springPage } from "types/vendor/springPage";
 import { formatPrice } from "utils/format";
 import "./styles.css";
 import { Venda } from "types/sales";
-import Catalog from "pages/Catalog";
 import NavBarSeller from "./NavBarSeller";
 
 type AuthData = {

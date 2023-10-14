@@ -1,11 +1,11 @@
-import axios, { AxiosRequestConfig, Method } from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import qs from "qs";
 import history from "./history";
 import { getAuthData } from "./storage";
 
-export const BASE_URL = `http://${"localhost"}:8080`;
+//export const BASE_URL = `http://${"localhost"}:8080`;
 
-//export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'https://ulasoftware-metas-bee63543f5ed.herokuapp.com';
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'https://metas-ulasoftware-puc-071d84e3f6d2.herokuapp.com';
 
 const CLIENT_ID = process.env.REACT_APP_BACKEND_URL ?? "metaspuc";
 const CLIENT_SECRET = process.env.REACT_APP_BACKEND_URL ?? "metaspuc123";
