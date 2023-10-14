@@ -5,7 +5,7 @@ import { getAuthData } from "./storage";
 
 //export const BASE_URL = `http://${"localhost"}:8080`;
 
-export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'https://metas-ulasoftware-puc-071d84e3f6d2.herokuapp.com';
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://${"localhost"}:8080';
 
 const CLIENT_ID = process.env.REACT_APP_BACKEND_URL ?? "metaspuc";
 const CLIENT_SECRET = process.env.REACT_APP_BACKEND_URL ?? "metaspuc123";
