@@ -33,7 +33,7 @@
     text-decoration-color: transparent;
 
     &.active {
-        background: rgb(255, 255, 255);
+        background:var(--secondary-hover-color);
         color: var(--primary-color) !important;
     }
 

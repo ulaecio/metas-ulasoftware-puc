@@ -6,12 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 :root {
     --color-primary: #ff8400fd;
-    --color-third: #2085e9f3;
+    --color-third: #ff840043;
     --primary-color: #ff8400bb;
     --color-quarter: #ff8400bb;
     --color-quarter: #ff8400bb;
     --color-fosco: rgb(255, 255, 255, 0.100);
     --primary-hover-color: #91684483;
+    --secondary-hover-color: #ff840043;
     --ml: 50%;
     --ml20: 20px;
     --ml30: 30px;
