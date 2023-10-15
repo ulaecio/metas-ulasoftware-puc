@@ -43,7 +43,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <BaseForm title="cadastrar uma categoria">
         <div className="row">
           <div className="col-6">

@@ -81,7 +81,7 @@ const Login = () => {
                             <link>
                             </link>
                             <div className='login-submit'>
-                                <ButtonIcon text='Fazer login' />
+                                <ButtonIcon text="Fazer login" />
                                 <span className='not-registered'>Não tem cadastro?
                                     {/* <a href="https://api.whatsapp.com/send?phone=+559891076037&text=Ol%C3%A1!%20N%C3%A3o%20consigo%20acessar%20minha%20rota%20no%20*Farol%20de%20Vendas*" target=''>Clique aqui</a> */}</span>
                             </div>

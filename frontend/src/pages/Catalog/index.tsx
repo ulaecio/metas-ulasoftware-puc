@@ -32,8 +32,6 @@ const Catalog = () => {
     <>
       <NavBarCatalog />
       <div className="catalog-container">
-        {/* <h1 className="catalog-title">Catalogo de produtos</h1> */}
-
         <div className="catalog-products">
           {isLoading ? (
             <ProductCardLoader />

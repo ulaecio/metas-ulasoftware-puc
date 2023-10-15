@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 */
-
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 :root {
     --color-primary: #ff8400fd;
@@ -21,6 +21,26 @@
     --mb: -3%;
     --color-third: #ff8400fd;
 }
+.btn-edit {
+    background-color: #e1e1e1;
+    border-color: #838282;
+    color: #8c8b8b;
+}
+.bd {
+    border: #3f87a6 solid 1px;
+}
+
+.text-c{
+text-align: center;
+border-right: 10px;
+border-bottom: 27px;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 
 .text-primary {
     color: var(--color-primary) !important;
@@ -98,14 +118,13 @@ body {
 
 .home-btn-order {
     background-color: var(--primary-color);
-    border-radius: 30px;
+    border-radius: 10px;
     width: 235px;
     font-weight: bold;
     font-size: 24px;
     letter-spacing: -0.015em;
     color: #FFF;
     margin-top: 50px;
-    margin-bottom: 30px;
     text-justify: initial;
 }
 
@@ -158,6 +177,11 @@ th {
 .a:hover {
     color: var(--primary-hover-color);
 }
+
+.card-base {
+    background: #FFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  }
 
 .base-input {
     border-radius: 10px;
