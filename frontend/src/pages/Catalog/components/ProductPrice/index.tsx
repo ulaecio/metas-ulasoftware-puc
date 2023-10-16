@@ -12,7 +12,7 @@ const formatPrice =( price: number) => {
 const ProductPrice = ( { price }: Props) => (
   <div className="product-price-container">
     <span className="product-currancy">R$</span>
-    <h3 className="product-price">
+    <h3  key={price} className="product-price">
         { formatPrice(price) }
     </h3>
   </div>

@@ -72,8 +72,8 @@ const Form = () => {
             >
               <option value="0">Selecione a categoria</option>
               <option value="1">Livros</option>
-              <option value="2">Computadores</option>
-              <option value="3">Eletrônicos</option>
+              <option value="2">Eletrônicos</option>
+              <option value="3">Computadores</option>
               <option value="4">Bebidas</option>
             </select>
             <input
