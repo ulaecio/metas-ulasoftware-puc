@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import BaseForm from "../../BaseForm";
-import { makePrivateRequest } from "core/utils/request";
-import 'react-toastify/dist/ReactToastify.css';
+import { makePrivateRequest, makeRequest } from "core/utils/request";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
+import { useParams } from "react-router-dom";
+
+type ParamsType = {
+  productId: string;
+};
 
 type FormState = {
   name: string;
@@ -23,6 +28,17 @@ const Form = () => {
     category: "0",
     description: "",
   });
+  const { productId } = useParams<ParamsType>();
+  const isEditing = productId !== "create";
+
+  useEffect(() => {
+    if (isEditing) {
+      makeRequest({ url: `/products/${productId}` })
+      .then((response) => {     
+        
+      })
+    }
+  }, [productId, isEditing]);
 
   const handleOnChange = (event: FormEvent) => {
     const name = event.target.name;

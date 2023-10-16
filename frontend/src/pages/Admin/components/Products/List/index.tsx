@@ -12,15 +12,13 @@ const List = () => {
   const [activePage, setActivePage] = useState(0);
   const history = useHistory();
 
-  console.log(productsResponse);
-
   useEffect(() => {
     const params = {
       page: activePage,
       linesPerPage: 12,
     };
     setIsLoading(true);
-    makeRequest({ url: "/products", params })
+    makeRequest({ url: "/products?linesPerPage=4&direction=ASC&orderBy=name", params })
       .then((response) => setProductsResponse(response.data))
       .finally(() => {
         setIsLoading(false);
