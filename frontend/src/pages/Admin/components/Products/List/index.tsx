@@ -4,6 +4,7 @@ import Card from "../Card";
 import "./styles.css";
 import { ProductsResponse } from "core/types/Product";
 import { makeRequest } from "core/utils/request";
+import Pagination from "pages/Catalog/components/Pagination";
 
 const List = () => {
   const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
@@ -12,7 +13,7 @@ const List = () => {
   const history = useHistory();
 
   console.log(productsResponse);
-  
+
   useEffect(() => {
     const params = {
       page: activePage,
@@ -36,9 +37,16 @@ const List = () => {
         Adicionar
       </button>
       <div className="admin-list-container">
-        {productsResponse?.content.map(product => (
-            <Card product={product} key={product.id}/>
+        {productsResponse?.content.map((product) => (
+          <Card product={product} key={product.id} />
         ))}
+        {productsResponse && (
+          <Pagination
+            totalPages={productsResponse.totalPages}
+            activePage={activePage}
+            onChange={(page) => setActivePage(page)}
+          />
+        )}
       </div>
     </div>
   );
