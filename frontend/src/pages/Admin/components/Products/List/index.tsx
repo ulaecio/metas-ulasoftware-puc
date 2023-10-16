@@ -30,24 +30,29 @@ const List = () => {
   const handleCreate = () => {
     history.push("/admin/products/create");
   };
-
   return (
     <div className="admin-products-list">
       <button className="btn home-btn-order" onClick={handleCreate}>
         Adicionar
       </button>
-      <div className="admin-list-container">
-        {productsResponse?.content.map((product) => (
-          <Card product={product} key={product.id} />
-        ))}
-        {productsResponse && (
-          <Pagination
-            totalPages={productsResponse.totalPages}
-            activePage={activePage}
-            onChange={(page) => setActivePage(page)}
-          />
-        )}
-      </div>
+      {isLoading ? (
+        <div className="mt-1">
+          <span>Carregando produtos ...</span>
+        </div>
+      ) : (
+        <div className="admin-list-container">
+          {productsResponse?.content.map((product) => (
+            <Card product={product} key={product.id} />
+          ))}
+          {productsResponse && (
+            <Pagination
+              totalPages={productsResponse.totalPages}
+              activePage={activePage}
+              onChange={(page) => setActivePage(page)}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 };
