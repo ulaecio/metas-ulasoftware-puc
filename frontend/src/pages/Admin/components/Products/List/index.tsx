@@ -15,10 +15,10 @@ const List = () => {
   useEffect(() => {
     const params = {
       page: activePage,
-      linesPerPage: 12,
+      linesPerPage: 4,
     };
     setIsLoading(true);
-    makeRequest({ url: "/products?linesPerPage=4&direction=ASC&orderBy=name", params })
+    makeRequest({ url: "/products", params })
       .then((response) => setProductsResponse(response.data))
       .finally(() => {
         setIsLoading(false);
