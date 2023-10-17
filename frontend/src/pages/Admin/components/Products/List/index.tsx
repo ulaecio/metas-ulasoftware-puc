@@ -3,8 +3,9 @@ import { useHistory } from "react-router-dom";
 import Card from "../Card";
 import "./styles.css";
 import { ProductsResponse } from "core/types/Product";
-import { makeRequest } from "core/utils/request";
+import { makePrivateRequest, makeRequest } from "core/utils/request";
 import Pagination from "pages/Catalog/components/Pagination";
+import { toast } from "react-toastify";
 
 const List = () => {
   const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
@@ -28,6 +29,18 @@ const List = () => {
   const handleCreate = () => {
     history.push("/admin/products/create");
   };
+
+  const onRemove = (productId: number) => {
+    makePrivateRequest({ url: `/products/${productId}`, method: "DELETE" })
+      .then(() => {
+        toast.success("Produto excluido com sucesso!");
+        history.push("/admin/products");
+      })
+      .catch(() => {
+        toast.error("Erro ao excluir o produto!");
+      })
+  }
+
   return (
     <div className="admin-products-list">
       <button className="btn home-btn-order" onClick={handleCreate}>
@@ -40,7 +53,7 @@ const List = () => {
       ) : (
         <div className="admin-list-container">
           {productsResponse?.content.map((product) => (
-            <Card product={product} key={product.id} />
+            <Card product={product} key={product.id} onRemove={onRemove} />
           ))}
           {productsResponse && (
             <Pagination
