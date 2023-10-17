@@ -12,8 +12,8 @@
 }
 
 .home-btn-order:hover {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #ff8400bb;
+    color: #ff8400bb;
 }
 
 .admin-list-container {

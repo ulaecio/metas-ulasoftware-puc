@@ -4,9 +4,9 @@ const Footer = () => {
       <div className='px-4'>
         <p className='text-light'
         >
-          Copy right 2021 ©
+          Copy right 2023 ©
           <a className='a'
-            href='https://www.instagram.com/ulaecio'
+            href='https://www.linkedin.com/in/ulaecio'
             target='_blank'
             rel='noreferrer'
           > Ulasoftware Tecnologia
@@ -19,7 +19,7 @@ const Footer = () => {
         >
           Developed by
           <a className='a'
-            href='https://facebook.com/ulaecio'
+            href='https://www.linkedin.com/in/ulaecio'
             target='_blank'
             rel='noreferrer'
           >

@@ -8,9 +8,9 @@
     --color-primary: #ff8400fd;
     --color-third: #ff840043;
     --primary-color: #ff8400bb;
+    --color-quarter: #995002d5;
     --color-quarter: #ff8400bb;
-    --color-quarter: #ff8400bb;
-    --color-fosco: rgb(255, 255, 255, 0.100);
+    --color-fosco: #ffffff1a;
     --primary-hover-color: #91684483;
     --secondary-hover-color: #ff840043;
     --ml: 50%;
@@ -27,7 +27,7 @@
     color: #8c8b8b;
 }
 .bd {
-    border: #3f87a6 solid 1px;
+    border: #a6743f solid 1px;
 }
 
 .text-c{

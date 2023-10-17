@@ -32,6 +32,7 @@
   letter-spacing: -0.015em;
   margin-top: 12px;
   margin-bottom: 0px;
+  color: var(--primary-color);
 }
 
 .product-card-description-admin{
@@ -40,7 +41,7 @@
 
 .badge-secondary{
 color: dimgray;
-background-color: #ff8400bb;
+background-color: #7e7e7ebb;
 margin-right: 5px;
 margin-bottom: 5px;
 

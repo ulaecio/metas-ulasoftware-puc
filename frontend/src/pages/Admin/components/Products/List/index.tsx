@@ -34,7 +34,7 @@ const List = () => {
     makePrivateRequest({ url: `/products/${productId}`, method: "DELETE" })
       .then(() => {
         toast.success("Produto excluido com sucesso!");
-        history.push("/admin/products");
+        history.replace("/admin/products");
       })
       .catch(() => {
         toast.error("Erro ao excluir o produto!");

@@ -48,7 +48,7 @@ const EditForm = () => {
     makePrivateRequest({ url: `/products/${productId}`, method: 'PUT', data })
       .then(() => {
         toast.success("Produto atualizado com sucesso!");
-        history.push('/admin/products');
+        history.replace('/admin/products');
       })
       .catch(() => {
         toast.error("Erro ao atualizar o produto!");
@@ -64,7 +64,7 @@ const EditForm = () => {
               {...register("name")}
               type="text"
               className="form-control mb-5"
-              placeholder="Nome do produto"
+              placeholder="Nome do produto (Minimo 5 caracteres)"
             />
             <input
               {...register("category")}

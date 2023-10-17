@@ -23,7 +23,7 @@
     margin-right: 10px;
 
     &.active{
-        background: #407bff;
+        background: #ff8400bb;
     }
 }
 
@@ -39,7 +39,7 @@
 
 .page-active {
     cursor: pointer;
-    color: #407bff;
+    color: #ff8400bb;
 }
 .page-inactive {
     color: #E1E1E1;

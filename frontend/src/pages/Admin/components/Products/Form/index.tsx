@@ -78,7 +78,7 @@ const Form = () => {
               type="text"
               className="form-control mb-5"
               onChange={handleOnChange}
-              placeholder="Nome do produto"
+              placeholder="Nome do produto (Minimo 5 caracteres"
             />
             <select
               value={formData.category}
